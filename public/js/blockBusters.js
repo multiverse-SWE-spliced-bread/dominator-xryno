@@ -8,10 +8,23 @@ console.log("test")
  document.getElementById("blocks").appendChild(newDiv);
 
 
- 
 }
 
 
 
-object.addEventListener("mouseover", function ());
+ let list = document.getElementsByClassName("red-block")
+
+for (i=0; i < list.length; i++) {
+
+    list[i].addEventListener("mouseover", function(){ 
+           
+        this.style.display="none";
+                        
+         },);
+
+}
+
+
+
+
  
