@@ -18,7 +18,7 @@ for (i=0; i < list.length; i++) {
 
     list[i].addEventListener("mouseover", function(){ 
            
-        this.style.display="none";
+        this.remove();
                         
          },);
 }

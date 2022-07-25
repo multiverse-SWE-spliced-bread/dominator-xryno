@@ -18,18 +18,29 @@ sarcBtn.addEventListener("click", function(){
     let sarcLen = para.innerHTML.length
     let new2 = ""
 
+    let j = 0
+
     for (i=0; i<sarcLen; i++) {
 
-        if (i % 2 === 0){
+    
+    if (para.innerHTML[i] !== " ") {
 
-            new2 += para.innerHTML[i].toLowerCase();
+             if (j % 2 === 0){
+
+                new2 += para.innerHTML[i].toUpperCase();
+                j++
+                
+            } else {
+                new2 += para.innerHTML[i].toLowerCase();
+                j++
+            }
 
         } else {
-            new2 += para.innerHTML[i].toUpperCase();
-        }
+            new2 += para.innerHTML[i]
 
-       
-    }
+        }  
+
+}
     para.innerHTML = new2
 },false);
 
