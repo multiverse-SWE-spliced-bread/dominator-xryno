@@ -23,21 +23,23 @@ sarcBtn.addEventListener("click", function(){
     for (i=0; i<sarcLen; i++) {
 
     
-    if (para.innerHTML[i] !== " " || para.innerHTML[i] !== "," || para.innerHTML[i] !== "!") {
+    if (para.innerHTML[i].match("[A-Za-z]")) {
 
-             if (j % 2 === 0){
+        if (j % 2 === 0){
+            new2 += para.innerHTML[i].toLowerCase();
+            
+            j++
+            
+        } else {
+            new2 += para.innerHTML[i].toUpperCase();
+            j++
+        }
 
-                new2 += para.innerHTML[i].toUpperCase();
-                j++
-                
-            } else {
-                new2 += para.innerHTML[i].toLowerCase();
-                j++
-            }
+        
 
         } else {
+           
             new2 += para.innerHTML[i]
-
         }  
 
 }
