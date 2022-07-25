@@ -23,7 +23,7 @@ sarcBtn.addEventListener("click", function(){
     for (i=0; i<sarcLen; i++) {
 
     
-    if (para.innerHTML[i] !== " ") {
+    if (para.innerHTML[i] !== " " || para.innerHTML[i] !== "," || para.innerHTML[i] !== "!") {
 
              if (j % 2 === 0){
 
